@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Rescisão CLT - Ferramenta Online</title>
+    <meta name="description" content="Página da ferramenta para cálculo de rescisão de contrato de trabalho CLT. Insira os dados e obtenha o resultado.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+</head>
+<body>
+
+    <header>
+        <h1>Calculadora de Rescisão Trabalhista CLT</h1>
+    </header>
+
+    <div class="tool-container">
+        <a href="index.html" class="back-link">&larr; Voltar para o Início</a>
+
+        <div class="calculator-body">
+            <div class="form-section">
+                <h2>Resolução de Contrato de Trabalho - CLT</h2>
+                <p class="subtitle">Informe os dados para o cálculo:</p>
+                <form id="calc-form">
+                    <label for="ultimoSalario">1. Valor do último salário bruto:</label>
+                    <input type="number" id="ultimoSalario" placeholder="Ex: 2500.00" required>
+
+                    <label for="dataAdmissao">2. Data de início do contrato:</label>
+                    <input type="date" id="dataAdmissao" required>
+
+                    <label for="dataDemissao">3. Data de fim do contrato:</label>
+                    <input type="date" id="dataDemissao" required>
+                    
+                    <label for="motivo">4. Motivo da rescisão:</label>
+                    <select id="motivo" required>
+                        <option value="sem_justa_causa" selected>Demissão sem justa causa</option>
+                        <option value="pedido_demissao">Pedido de demissão</option>
+                        <option value="com_justa_causa">Demissão por justa causa</option>
+                    </select>
+
+                    <label for="avisoPrevio">5. O aviso prévio foi:</label>
+                    <select id="avisoPrevio" required>
+                        <option value="indenizado">Indenizado</option>
+                        <option value="trabalhado">Trabalhado</option>
+                    </select>
+                    
+                    <label for="feriasVencidas">6. Possui férias vencidas (não tiradas)?</label>
+                    <select id="feriasVencidas" required>
+                        <option value="nao" selected>Não</option>
+                        <option value="sim">Sim</option>
+                    </select>
+
+                    <button type="submit" class="cta-button">Calcular Rescisão</button>
+                </form>
+            </div>
+
+            <div class="results-section" id="results-section" style="display: none;">
+                <h2>Resultado do Cálculo</h2>
+                <div id="results-output">
+                    </div>
+                <div class="results-disclaimer">
+                    <p><strong>Atenção:</strong> Este é um cálculo de estimativa. Os valores podem variar e não incluem descontos como INSS, IRRF ou adiantamentos. Para valores exatos, consulte o seu RH ou um contador.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Calculadora de Rescisão CLT | <a href="#">Política de Privacidade</a></p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
